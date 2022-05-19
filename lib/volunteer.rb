@@ -34,8 +34,8 @@ class Volunteer
   end
 
   def self.find_by_project(prj_id)
-    returned_volunteers = DB.exec("SELECT * FROM volunteers WHERE project_id = #{prj_id};")
     volunteers = []
+    returned_volunteers = DB.exec("SELECT * FROM volunteers WHERE project_id = #{prj_id};")
     returned_volunteers.each do |volunteer|
       name = volunteer.fetch("name")
       id = volunteer.fetch("id").to_i
@@ -56,9 +56,9 @@ class Volunteer
     end
   end
 
-  def update(name, prj_id)
+  def update(name, project_id)
     @name = name
-    @project_id = prj_id
+    @project_id = project_id
     DB.exec("UPDATE volunteers SET name = '#{@name}', project_id = #{@project_id} WHERE id = #{@id}")
   end
 
