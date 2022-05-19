@@ -7,12 +7,12 @@
   <label for="title"> Change project name </label>
   <input id="title" name="title" type="text" class="form-control">
 </div>
-  <button type="submit" class="btn btn-info">Update Project</button>
+  <button type="submit" class="btn">Update Project</button>
 </form>
 
 <form action='/projects/<%= @project.id %>/edit' method="post">
   <input name="_method" type="hidden" value="delete">
-  <button type="submit" class="btn btn-danger">Delete Project</button>
+  <button type="submit" class="btn">Delete Project</button>
 </form>
 
 <br>
