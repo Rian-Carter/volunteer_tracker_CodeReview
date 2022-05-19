@@ -7,14 +7,14 @@
   <input name="_method" type="hidden" value="patch">
 
   <label for="name">Update volunteer name</label>
-  <input id="vname" name="name" type="text" class="form-control">
+  <input id="name" name="name" type="text" class="form-control">
 </div>
-  <button type="submit" class="btn btn-info">Update Volunteer</button>
+  <button type="submit" class="btn">Update Volunteer</button>
 </form>
 
-<form action='/projects/<%= @volunteer.project.id %>/volunteers/<%= @volunteer.id %>' method="post">
+<form action="/projects/<%= @volunteer.project.id %>/volunteers/<%= @volunteer.id %>" method="post">
   <input name="_method" type="hidden" value="delete">
-  <button type="submit" class="btn btn-danger">Delete Volunteer</button>
+  <button type="submit" class="btn">Delete Volunteer</button>
 </form>
 
 <br>
