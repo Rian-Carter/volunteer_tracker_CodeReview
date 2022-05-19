@@ -1,6 +1,7 @@
-<h3> Welcome to "<%= @project.title %>" </h3>
+<h3> Welcome to <%= @project.title %> </h3>
 
 <h4> Volunteers on this project </h4>
+
 <% if @project.volunteers %>
   <ul>
     <% @project.volunteers.each do |volunteer| %>
@@ -16,9 +17,10 @@
 <form action="/projects/<%= @project.id %>/edit" method="post">
   <div class="form-group">
     <label for="title">Add Name</label>
-    <input id="v" type="text" name="name" class="form-control">
+    <%# <input id="v" type="text" name="name" class="form-control"> %>
+    <input id="name" name="name" class="form-control" type="text">
   </div>
-  <button type="submit" class="btn btn-info">Add Volunteer</button>
+  <button type="submit" class="btn">Add Volunteer</button>
 </form>
 
 <h4> Edit this project? <button class="btn btn-info"><a href="/projects/<%= @project.id %>/edit">Eddit Project</a></button>
