@@ -13,9 +13,7 @@ class Project
   end
 
   def ==(project_to_compare)
-    if self.title == project_to_compare.title
-      return true
-    end
+    self.title == project_to_compare.title
   end
 
   def self.all
@@ -48,7 +46,7 @@ class Project
   end
 
   def delete
-    DB.exec("DELETE FROM projects WHERE id = #{@id}")
+    DB.exec("DELETE FROM projects WHERE id = #{@id};")
     DB.exec("DELETE FROM volunteers WHERE project_id = #{@id};")
   end
 end
