@@ -1,0 +1,8 @@
+require('pg')
+require('sinatra')
+require('sinatra/reloader')
+require('./lib/project')
+require('./lib/volunteer')
+require('pry')
+require('./db_access.rb')
+also_reload('lib/**/*.rb')
