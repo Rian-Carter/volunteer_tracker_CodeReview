@@ -31,13 +31,19 @@
 
 * Clone this project using $ git clone https://github.com/Rian-Carter/volunteer_tracker_CodeReview.git
 * Open in a text editor such as VS Code
-* If on windows you will need to create a file in the root directory of the project called 'db_access.rb' and within that file you will need to add the following: 'DB = PG.connect({:dbname => 'volunteer_tracker', :password => '[YOUR PASSWORD GOES HERE]'})'.
+* If on windows you will need to create a file in the root directory of the project called 'db_access.rb' and within that file you will need to add the following: "DB = PG.connect({:dbname => 'volunteer_tracker', :password => '[YOUR PASSWORD GOES HERE]'})".
   * If on mac you will need to navigate to 'spec_helper.rb' and add 'DB = PG.connect({:dbname => 'volunteer_tracker})' below the require statements.
 * In your terminal you will need to run the command 'bundle install'
-* In the terminal run command 'rspec' to see tests passing
 * In your terminal you will need to run the command 'postgres' to start up a server
-* In your terminal you will then need to run the command 'ruby app.rb'
+* You will need to recreate the database schema by running the following commands in your terminal 
+    1. createdb [DATABASE NAME]
+    2. psql [DATABASE NAME] < database_backup.sql
+      * If on windows run the aforementioned command adding .exe after psql ex. 'psql.exe [DATABASE NAME] < database_backup.sql'
+    3. createdb -T [DATABASE NAME] [TEST DATABASE NAME]
+* In the terminal run command 'rspec' to see tests passing
+* In your terminal from the root directory of the project you will then need to run the command 'ruby app.rb'
 * In your web browser navigate to 'localhost:4567' and enjoy
+
 
 ## Known Bugs
 
