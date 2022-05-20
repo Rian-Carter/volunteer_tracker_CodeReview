@@ -17,12 +17,12 @@
 <form action="/projects/<%= @project.id %>/edit" method="post">
   <div class="form-group">
     <label for="title">Add Name</label>
-    <input id="name" name="name" class="form-control" type="text">
+    <input id="title" name="title" class="form-control" type="text">
   </div>
   <button type="submit" class="btn">Add Volunteer</button>
 </form>
 
-<h4> Edit this project? <button class="btn btn-info"><a href="/projects/<%= @project.id %>/edit">Eddit Project</a></button>
+<h4> Edit this project? <button class="btn btn-info"><a href="/projects/<%= @project.id %>/edit">Edit Project</a></button>
 
 <br>
 <br>
