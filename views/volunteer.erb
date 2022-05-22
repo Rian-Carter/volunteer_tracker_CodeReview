@@ -1,6 +1,7 @@
 <h3>Volunteer: <%= @volunteer.name %></h3>
 
-<p> Currently a volunteer of <a href="/projects/<%= @volunteer.project_id %>">"<%= @volunteer.project.title %>"</a> project</p>
+<%# <p> Currently a volunteer of <a href="/projects/<%= @volunteer.project_id">"<%= @volunteer.project.title"</a> project</p> %>
+<h3>Project: <%= @volunteer.project.title %></h3>
 
 <form action='/projects/<%= @volunteer.project.id %>/volunteers/<%= @volunteer.id %>' method="post">
 <div class="form-group">
@@ -9,9 +10,11 @@
   <label for="name">Update volunteer name</label>
   <input id="name" name="name" type="text" class="form-control">
 </div>
+<br>
   <button type="submit" class="btn">Update Volunteer</button>
 </form>
-
+<br>
+<br>
 <form action="/projects/<%= @volunteer.project.id %>/volunteers/<%= @volunteer.id %>" method="post">
   <input name="_method" type="hidden" value="delete">
   <button type="submit" class="btn">Delete Volunteer</button>
