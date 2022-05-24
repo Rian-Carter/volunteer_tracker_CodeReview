@@ -15,11 +15,8 @@
 <h4> Add a volunteer to this project </h4>
 
 <form action="/projects/<%= @project.id %>/volunteers" method="post">
-<%# <form action="/projects/<%= @project.id/edit" method="post"> %>
   <div class="form-group">
-    <%# <label for="title">Add Name</label> %>
     <label for="volunteer_name">Add Name</label>
-    <%# <input id="title" name="title" class="form-control" type="text"> %>
     <input id="volunteer_name" name="volunteer_name" class="form-control" type="text">
   </div>
   <button type="submit" class="btn">Add Volunteer</button>
