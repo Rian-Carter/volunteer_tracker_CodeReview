@@ -2,8 +2,8 @@
 <h3>Update <%= @project.title %> Project</h3>
 <hr>
 
-<form action="/projects/<%= @project.id %>" method="post">
-<%# <form action='/projects/<%= @project.id/edit' method="post"> %>
+
+<form action="/projects/<%= @project.id %>/edit" method="post">
 <div class="form-group">
   <input name="_method" type="hidden" value="patch">
   <div id="textField">
@@ -14,7 +14,6 @@
   <button type="submit" class="btn">Update Project</button>
 </form>
 <br>
-<%# <form action="/projects/<%= @project.id" method="post"> %>
 <form action="/projects/<%= @project.id %>" method="post">
   <input name="_method" type="hidden" value="delete">
   <button type="submit" class="btn">Delete Project</button>
