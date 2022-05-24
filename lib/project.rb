@@ -13,16 +13,12 @@ class Project
   end
 
   def ==(project_to_compare)
-    self.title == project_to_compare.title
+    if project_to_compare != nil
+      (self.title == project_to_compare.title)
+    else
+      false
+    end
   end
-
-  # def ==(project_to_compare)
-  #   if project_to_compare != nil
-  #     (self.title == project_to_compare.title)
-  #   else
-  #     false
-  #   end
-  # end
 
   def self.all
     returned_projects = DB.exec("SELECT * FROM projects;")
@@ -56,10 +52,6 @@ class Project
       DB.exec("UPDATE projects SET title = '#{@title}' WHERE id = #{@id}")
     end
   end
-  # def update(title)
-  #   @title = title
-  #   DB.exec("UPDATE projects SET title = '#{@title}' WHERE id = #{@id};")
-  # end
 
   def delete
     DB.exec("DELETE FROM projects WHERE id = #{@id};")
