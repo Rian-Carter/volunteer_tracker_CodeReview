@@ -1,6 +1,5 @@
 <h3>Volunteer: <%= @volunteer.name %></h3>
 
-<%# <p> Currently a volunteer of <a href="/projects/<%= @volunteer.project_id">"<%= @volunteer.project.title"</a> project</p> %>
 <h3>Project: <%= @volunteer.project.title %></h3>
 
 <form action='/projects/<%= @volunteer.project.id %>/volunteers/<%= @volunteer.id %>' method="post">
