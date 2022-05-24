@@ -17,8 +17,6 @@ describe Volunteer do
 
   describe '#==' do
     it 'checks for equality based on the name of a volunteer' do
-      project = Project.new({:title => "Teaching Kids To Code", :id => nil})
-      project.save
       volunteer1 = Volunteer.new({:name => 'Jane', :project_id => 1, :id => nil})
       volunteer2 = Volunteer.new({:name => 'Jane', :project_id => 1, :id => nil})
       expect(volunteer1 == volunteer2).to eq true
